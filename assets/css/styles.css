@@ -242,3 +242,106 @@ svg { width: 1.15em; height: 1.15em; fill: none; stroke: currentColor; stroke-wi
   .reveal { opacity: 1; transform: none; }
   .pointer-glow { display: none; }
 }
+
+/* 100 Days of Python */
+.challenge-banner {
+  margin-bottom: 16px;
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 48px;
+  align-items: end;
+  position: relative;
+  overflow: hidden;
+}
+.challenge-banner::after {
+  content: "100";
+  position: absolute;
+  right: 20px;
+  top: -32px;
+  font: 900 9rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: rgba(255,255,255,.018);
+  pointer-events: none;
+}
+.challenge-banner__copy { position: relative; z-index: 1; }
+.challenge-banner__copy h3 {
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  line-height: .9;
+  margin: 8px 0 18px;
+  background: linear-gradient(90deg, var(--pink), var(--purple), var(--blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.challenge-banner__copy h3 span { color: var(--dim); -webkit-text-fill-color: var(--dim); font-size: .42em; }
+.challenge-banner__copy > p:not(.card-label) { color: var(--muted); max-width: 560px; }
+.challenge-progress { position: relative; z-index: 1; }
+.challenge-progress__meta,
+.challenge-progress__days {
+  display: flex;
+  justify-content: space-between;
+  color: var(--dim);
+  font: 750 .62rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .06em;
+}
+.challenge-progress__meta { margin-bottom: 11px; }
+.challenge-progress__days { margin-top: 10px; }
+.challenge-progress__track {
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.055);
+  border: 1px solid rgba(255,255,255,.06);
+  overflow: hidden;
+  box-shadow: inset 0 0 20px rgba(0,0,0,.35);
+}
+.challenge-progress__track span {
+  display: block;
+  min-width: 10px;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--pink), var(--purple), var(--blue));
+  box-shadow: 0 0 18px rgba(168,85,247,.7);
+}
+.code-window__bar span {
+  margin-left: auto;
+  color: var(--dim);
+  font: 650 .58rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.project-note {
+  margin-left: auto;
+  align-self: center;
+  color: var(--dim);
+  font: 700 .62rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .04em;
+}
+.project-card--challenge::after {
+  content: "02/100";
+  position: absolute;
+  right: -18px;
+  bottom: 18px;
+  transform: rotate(-90deg);
+  color: rgba(255,255,255,.035);
+  font: 900 2.4rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.challenge-mini { margin-top: 28px; display: flex; align-items: baseline; gap: 10px; }
+.challenge-mini strong {
+  font-size: 2.4rem;
+  line-height: 1;
+  background: linear-gradient(90deg, var(--pink), var(--blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.challenge-mini span { color: var(--dim); font: 700 .68rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+@media (max-width: 960px) {
+  .challenge-banner { grid-template-columns: 1fr; gap: 30px; }
+}
+
+@media (max-width: 700px) {
+  .challenge-banner { padding: 23px; }
+  .challenge-progress__days span:nth-child(2),
+  .challenge-progress__days span:nth-child(4) { display: none; }
+  .project-note { margin-left: 0; }
+}

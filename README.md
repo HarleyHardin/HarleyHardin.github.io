@@ -49,3 +49,9 @@ For `www`, create a CNAME pointing to:
 `<your-github-username>.github.io`
 
 Do not use a wildcard (`*`) record for GitHub Pages.
+
+## 100 Days of Python
+
+The portfolio includes a live 100 Days of Python section. Source files live in `projects/python-100-days/`. The current build features Day 01 (Number Guessing Game) and Day 02 (Simple Quiz Game).
+
+For each new day, add the new Python file, update the challenge counter and project card in `index.html`, then commit and push.

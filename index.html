@@ -91,7 +91,7 @@
             <div class="terminal__list">
               <span><i>01</i> Application Security</span>
               <span><i>02</i> Python Engineering</span>
-              <span><i>03</i> Security Research</span>
+              <span><i>03</i> 100 Days of Python // 002/100</span>
             </div>
             <p><span class="prompt">$</span> status</p>
             <p class="terminal__output terminal__output--accent">building // learning // shipping<span class="cursor">_</span></p>
@@ -147,59 +147,81 @@
         </a>
       </div>
 
+      <div class="challenge-banner glass reveal" aria-label="100 Days of Python challenge progress">
+        <div class="challenge-banner__copy">
+          <p class="card-label">100 DAYS OF PYTHON</p>
+          <h3>02 <span>/ 100</span></h3>
+          <p>One Python project every day. This portfolio will grow with the challenge as I practice, experiment, and ship increasingly capable programs.</p>
+        </div>
+        <div class="challenge-progress" aria-hidden="true">
+          <div class="challenge-progress__meta"><span>DAY 002</span><span>2% COMPLETE</span></div>
+          <div class="challenge-progress__track"><span style="width: 2%"></span></div>
+          <div class="challenge-progress__days"><span>001</span><span>025</span><span>050</span><span>075</span><span>100</span></div>
+        </div>
+      </div>
+
       <div class="projects-grid">
         <article class="project-card project-card--featured glass reveal">
           <div class="project-card__topline">
-            <span>FEATURED // 001</span>
-            <span class="project-status">ACTIVE</span>
+            <span>FEATURED // DAY 001</span>
+            <span class="project-status">SHIPPED</span>
           </div>
           <div class="project-card__content">
             <div>
-              <p class="card-label">PYTHON / SECURITY</p>
-              <h3>Your Featured Python Project</h3>
-              <p>Use this space for the strongest project in your portfolio. Explain the problem, what you built, and why the solution is technically interesting in two or three sentences.</p>
-              <div class="tags" aria-label="Technologies used">
-                <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span>
+              <p class="card-label">PYTHON / CLI</p>
+              <h3>Number Guessing Game</h3>
+              <p>A terminal guessing game that generates a random number from 1–100, validates user input and range, tracks attempts, and gives color-coded higher/lower feedback until the correct answer is found.</p>
+              <div class="tags" aria-label="Concepts used">
+                <span>Python</span><span>random</span><span>Input Validation</span><span>Loops</span><span>ANSI Color</span>
               </div>
             </div>
-            <div class="project-visual" aria-hidden="true">
-              <div class="code-window">
-                <div class="code-window__bar"><i></i><i></i><i></i></div>
-                <pre><code><span class="code-purple">class</span> <span class="code-blue">Project</span>:
-    focus = <span class="code-pink">"security"</span>
-    language = <span class="code-pink">"python"</span>
+            <div class="project-visual">
+              <div class="code-window" aria-label="Excerpt from the Number Guessing Game source code">
+                <div class="code-window__bar"><i></i><i></i><i></i><span>Day_1_Number_Guessing_Game.py</span></div>
+                <pre><code><span class="code-purple">answer</span> = random.randint(<span class="code-blue">1</span>, <span class="code-blue">100</span>)
+tries = <span class="code-blue">1</span>
 
-    <span class="code-purple">def</span> <span class="code-blue">build</span>(self):
-        <span class="code-purple">return</span> <span class="code-pink">"something useful"</span></code></pre>
+<span class="code-purple">while</span> <span class="code-blue">True</span>:
+    guess = input(<span class="code-pink">"What is your guess: "</span>)
+
+    <span class="code-purple">if not</span> guess.isdigit():
+        print(RED + <span class="code-pink">"Please enter a valid number."</span> + RESET)
+        <span class="code-purple">continue</span>
+
+    <span class="code-purple">if</span> answer == int(guess):
+        print(GREEN + <span class="code-pink">"CORRECT!"</span> + RESET)
+        <span class="code-purple">break</span></code></pre>
               </div>
             </div>
           </div>
           <div class="project-card__footer">
-            <a href="https://github.com/HarleyHardin/HarleyHardin.github.io" target="_blank" rel="noreferrer">Source code <span>↗</span></a>
-            <a href="#contact">Ask me about it <span>→</span></a>
+            <a href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Day_1_Number_Guessing_Game.py" target="_blank" rel="noreferrer">View source <span>↗</span></a>
+            <span class="project-note">100 Days of Python // Day 01</span>
           </div>
         </article>
 
         <article class="project-card glass reveal">
-          <div class="project-card__topline"><span>PROJECT // 002</span><span>PY</span></div>
+          <div class="project-card__topline"><span>DAY 002 // PROJECT</span><span>PY</span></div>
           <div>
-            <p class="card-label">AUTOMATION</p>
-            <h3>Python Automation Tool</h3>
-            <p>Replace this with a Python utility that eliminated repetitive work or improved an existing workflow.</p>
+            <p class="card-label">PYTHON / DATETIME</p>
+            <h3>Simple Quiz Game</h3>
+            <p>A five-question terminal quiz that uses the current date and calendar to generate answers, accepts case-insensitive input, tracks correct responses, and calculates a final percentage score.</p>
           </div>
-          <div class="tags"><span>Python</span><span>CLI</span><span>Automation</span></div>
-          <a class="project-link" href="https://github.com/HarleyHardin" target="_blank" rel="noreferrer" aria-label="View Python Automation Tool on GitHub">View project <span>↗</span></a>
+          <div class="tags"><span>Python</span><span>datetime</span><span>calendar</span><span>Scoring</span><span>CLI</span></div>
+          <a class="project-link" href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Day_2_Simple_Quiz_Game.py" target="_blank" rel="noreferrer" aria-label="View Simple Quiz Game source on GitHub">View source <span>↗</span></a>
         </article>
 
-        <article class="project-card glass reveal">
-          <div class="project-card__topline"><span>PROJECT // 003</span><span>SEC</span></div>
+        <article class="project-card project-card--challenge glass reveal">
+          <div class="project-card__topline"><span>CHALLENGE // LIVE</span><span>100</span></div>
           <div>
-            <p class="card-label">CYBERSECURITY</p>
-            <h3>Security Research Project</h3>
-            <p>Use this card for a lab, security utility, writeup series, or research project that demonstrates methodology and technical depth.</p>
+            <p class="card-label">DAILY BUILD LOG</p>
+            <h3>100 Days of Python</h3>
+            <p>A running challenge to design and write one Python project every day. New projects will be added here as the challenge progresses, with the strongest builds promoted to featured work.</p>
           </div>
-          <div class="tags"><span>Linux</span><span>Web Security</span><span>Research</span></div>
-          <a class="project-link" href="https://github.com/HarleyHardin" target="_blank" rel="noreferrer" aria-label="View Security Research Project on GitHub">View project <span>↗</span></a>
+          <div class="challenge-mini">
+            <strong>2</strong><span>projects shipped</span>
+          </div>
+          <a class="project-link" href="https://github.com/HarleyHardin/HarleyHardin.github.io/tree/main/projects/python-100-days" target="_blank" rel="noreferrer" aria-label="Browse the 100 Days of Python source files on GitHub">Browse challenge <span>↗</span></a>
         </article>
       </div>
     </section>

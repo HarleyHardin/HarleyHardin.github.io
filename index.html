@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070711">
+  <meta name="description" content="Harley Hardin — aspiring cybersecurity specialist and Python developer. Explore projects, skills, and ways to connect.">
+  <meta name="author" content="Harley Hardin">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Harley Hardin | Cybersecurity & Python">
+  <meta property="og:description" content="Cybersecurity, Python development, and practical technical projects.">
+  <meta property="og:url" content="https://harleyhardin.me/">
+
+  <title>Harley Hardin | Cybersecurity & Python</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__orb ambient__orb--pink"></div>
+    <div class="ambient__orb ambient__orb--purple"></div>
+    <div class="ambient__orb ambient__orb--blue"></div>
+    <div class="ambient__grid"></div>
+    <div class="ambient__noise"></div>
+    <div class="pointer-glow" id="pointer-glow"></div>
+  </div>
+
+  <header class="site-header" id="top">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Harley Hardin home">
+        <span class="brand__mark">HH</span><span class="brand__dot">.</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero__eyebrow reveal">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Portfolio // 2026</span>
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__copy">
+          <p class="kicker reveal">CYBERSECURITY <span>/</span> PYTHON DEVELOPMENT</p>
+          <h1 id="hero-title" class="hero__title reveal">
+            Harley <span class="gradient-text">Hardin.</span>
+          </h1>
+          <p class="hero__lead reveal">
+            I build practical software, explore how systems fail, and turn technical problems into clean, useful solutions.
+          </p>
+
+          <div class="hero__actions reveal">
+            <!-- Replace the PDF in /resume with your real resume, then remove aria-disabled. -->
+            <a class="button button--primary" href="resume/harley-hardin-resume.pdf" download aria-label="Download Harley Hardin's resume">
+              <span>Download Resume</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"/></svg>
+            </a>
+            <a class="button button--ghost" href="#projects">
+              <span>View Projects</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero__terminal glass reveal" aria-label="Current focus summary">
+          <div class="terminal__bar">
+            <div class="terminal__dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <span>profile.sh</span>
+            <span class="terminal__status">● ONLINE</span>
+          </div>
+          <div class="terminal__body">
+            <p><span class="prompt">$</span> whoami</p>
+            <p class="terminal__output">Harley Hardin</p>
+            <p><span class="prompt">$</span> focus --current</p>
+            <div class="terminal__list">
+              <span><i>01</i> Application Security</span>
+              <span><i>02</i> Python Engineering</span>
+              <span><i>03</i> Security Research</span>
+            </div>
+            <p><span class="prompt">$</span> status</p>
+            <p class="terminal__output terminal__output--accent">building // learning // shipping<span class="cursor">_</span></p>
+          </div>
+        </aside>
+      </div>
+
+      <div class="hero__scroll reveal" aria-hidden="true">
+        <span>SCROLL TO EXPLORE</span>
+        <i></i>
+      </div>
+    </section>
+
+    <section class="section shell" id="about" aria-labelledby="about-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-index">01 // ABOUT</p>
+          <h2 id="about-title">Security mindset.<br><span class="gradient-text">Builder mentality.</span></h2>
+        </div>
+        <p class="section-heading__copy">
+          I’m an aspiring cybersecurity specialist and Python developer focused on understanding systems deeply, finding better ways to solve problems, and building tools that are useful in the real world.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <article class="glass about-card reveal">
+          <p class="card-label">// APPROACH</p>
+          <h3>Learn by building.</h3>
+          <p>I enjoy moving between offensive-security concepts and software development—studying how applications behave, then applying that understanding to better code and better systems.</p>
+        </article>
+        <article class="glass about-card reveal">
+          <p class="card-label">// CURRENT FOCUS</p>
+          <h3>Web security + Python.</h3>
+          <p>My current work centers on Python applications, APIs, Linux, web application security, authentication, access control, and practical security research.</p>
+        </article>
+        <article class="glass about-card about-card--accent reveal">
+          <p class="card-label">// PRINCIPLE</p>
+          <h3>Make it useful.</h3>
+          <p>I care about projects that do something meaningful: automate a workflow, reveal useful information, improve security, or make a complicated process easier to understand.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading section-heading--projects reveal">
+        <div>
+          <p class="section-index">02 // SELECTED WORK</p>
+          <h2 id="projects-title">Projects built to<br><span class="gradient-text">solve real problems.</span></h2>
+        </div>
+        <a class="text-link" href="https://github.com/HarleyHardin" target="_blank" rel="noreferrer">
+          All repositories
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card project-card--featured glass reveal">
+          <div class="project-card__topline">
+            <span>FEATURED // 001</span>
+            <span class="project-status">ACTIVE</span>
+          </div>
+          <div class="project-card__content">
+            <div>
+              <p class="card-label">PYTHON / SECURITY</p>
+              <h3>Your Featured Python Project</h3>
+              <p>Use this space for the strongest project in your portfolio. Explain the problem, what you built, and why the solution is technically interesting in two or three sentences.</p>
+              <div class="tags" aria-label="Technologies used">
+                <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span>
+              </div>
+            </div>
+            <div class="project-visual" aria-hidden="true">
+              <div class="code-window">
+                <div class="code-window__bar"><i></i><i></i><i></i></div>
+                <pre><code><span class="code-purple">class</span> <span class="code-blue">Project</span>:
+    focus = <span class="code-pink">"security"</span>
+    language = <span class="code-pink">"python"</span>
+
+    <span class="code-purple">def</span> <span class="code-blue">build</span>(self):
+        <span class="code-purple">return</span> <span class="code-pink">"something useful"</span></code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="project-card__footer">
+            <a href="https://github.com/HarleyHardin/HarleyHardin.github.io" target="_blank" rel="noreferrer">Source code <span>↗</span></a>
+            <a href="#contact">Ask me about it <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="project-card glass reveal">
+          <div class="project-card__topline"><span>PROJECT // 002</span><span>PY</span></div>
+          <div>
+            <p class="card-label">AUTOMATION</p>
+            <h3>Python Automation Tool</h3>
+            <p>Replace this with a Python utility that eliminated repetitive work or improved an existing workflow.</p>
+          </div>
+          <div class="tags"><span>Python</span><span>CLI</span><span>Automation</span></div>
+          <a class="project-link" href="https://github.com/HarleyHardin" target="_blank" rel="noreferrer" aria-label="View Python Automation Tool on GitHub">View project <span>↗</span></a>
+        </article>
+
+        <article class="project-card glass reveal">
+          <div class="project-card__topline"><span>PROJECT // 003</span><span>SEC</span></div>
+          <div>
+            <p class="card-label">CYBERSECURITY</p>
+            <h3>Security Research Project</h3>
+            <p>Use this card for a lab, security utility, writeup series, or research project that demonstrates methodology and technical depth.</p>
+          </div>
+          <div class="tags"><span>Linux</span><span>Web Security</span><span>Research</span></div>
+          <a class="project-link" href="https://github.com/HarleyHardin" target="_blank" rel="noreferrer" aria-label="View Security Research Project on GitHub">View project <span>↗</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" id="skills" aria-labelledby="skills-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-index">03 // CAPABILITIES</p>
+          <h2 id="skills-title">Tools I use.<br><span class="gradient-text">Skills I’m sharpening.</span></h2>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <article class="glass skill-panel reveal">
+          <div class="skill-panel__head">
+            <span class="skill-icon">&lt;/&gt;</span>
+            <div><p class="card-label">DEVELOPMENT</p><h3>Build</h3></div>
+          </div>
+          <div class="skill-list">
+            <span>Python</span><span>FastAPI</span><span>REST APIs</span><span>PostgreSQL</span><span>Docker</span><span>Git / GitHub</span>
+          </div>
+        </article>
+
+        <article class="glass skill-panel reveal">
+          <div class="skill-panel__head">
+            <span class="skill-icon">◇</span>
+            <div><p class="card-label">CYBERSECURITY</p><h3>Break / Defend</h3></div>
+          </div>
+          <div class="skill-list">
+            <span>Web Security</span><span>Authentication</span><span>Access Control</span><span>Burp Suite</span><span>Linux</span><span>Security Research</span>
+          </div>
+        </article>
+
+        <article class="glass skill-panel reveal">
+          <div class="skill-panel__head">
+            <span class="skill-icon">$_</span>
+            <div><p class="card-label">ENVIRONMENT</p><h3>Operate</h3></div>
+          </div>
+          <div class="skill-list">
+            <span>Kali Linux</span><span>CLI</span><span>Docker Compose</span><span>VS Code</span><span>Networking</span><span>Technical Writing</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section shell" id="contact" aria-labelledby="contact-title">
+      <div class="contact-card glass reveal">
+        <div class="contact-card__glow" aria-hidden="true"></div>
+        <p class="section-index">04 // CONTACT</p>
+        <h2 id="contact-title">Have something interesting<br>to <span class="gradient-text">build or secure?</span></h2>
+        <p>I’m always interested in connecting with people working on cybersecurity, Python, software, and challenging technical problems.</p>
+
+        <div class="contact-actions">
+          <a class="button button--primary" href="mailto:YOUR_EMAIL_ADDRESS">
+            <span>Email Me</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>
+          </a>
+          <div class="social-links" aria-label="Social links">
+            <a href="https://github.com/HarleyHardin" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <p>© <span id="year">2026</span> Harley Hardin</p>
+    <p class="footer__center">Designed &amp; built with intention.</p>
+    <a href="#top" id="back-to-top">Back to top ↑</a>
+  </footer>
+</body>
+</html>

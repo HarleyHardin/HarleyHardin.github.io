@@ -1,0 +1,5 @@
+Add your resume PDF to this folder with this exact filename:
+
+harley-hardin-resume.pdf
+
+The Download Resume button on the homepage already points to that path.

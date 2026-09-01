@@ -1,0 +1,51 @@
+# harleyhardin.me
+
+Static cybersecurity + Python portfolio for Harley Hardin, designed for GitHub Pages.
+
+## Before publishing
+
+Search the project for these placeholders and replace them:
+
+- `HarleyHardin`
+- `HarleyHardin.github.io`
+- `YOUR_EMAIL_ADDRESS`
+- `YOUR_LINKEDIN`
+
+Then add your resume as:
+
+`resume/harley-hardin-resume.pdf`
+
+## Preview locally
+
+From this directory:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then visit `http://localhost:8000`.
+
+## GitHub Pages
+
+Use a public repository named `<your-github-username>.github.io` for the simplest personal-site setup.
+
+Push this folder's contents to the repository's `main` branch, then enable GitHub Pages from `main` / `(root)` in Repository Settings > Pages.
+
+The included `CNAME` file contains:
+
+`harleyhardin.me`
+
+## DNS records for harleyhardin.me
+
+For the root (`@`), point four A records to GitHub Pages:
+
+- 185.199.108.153
+- 185.199.109.153
+- 185.199.110.153
+- 185.199.111.153
+
+For `www`, create a CNAME pointing to:
+
+`<your-github-username>.github.io`
+
+Do not use a wildcard (`*`) record for GitHub Pages.

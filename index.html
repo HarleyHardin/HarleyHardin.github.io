@@ -153,10 +153,21 @@
           <h3>02 <span>/ 100</span></h3>
           <p>One Python project every day. This portfolio will grow with the challenge as I practice, experiment, and ship increasingly capable programs.</p>
         </div>
-        <div class="challenge-progress" aria-hidden="true">
-          <div class="challenge-progress__meta"><span>DAY 002</span><span>2% COMPLETE</span></div>
-          <div class="challenge-progress__track"><span style="width: 2%"></span></div>
-          <div class="challenge-progress__days"><span>001</span><span>025</span><span>050</span><span>075</span><span>100</span></div>
+        <div class="challenge-progress" aria-label="2 of 100 projects completed">
+          <div class="challenge-progress__status">
+            <div>
+              <span class="challenge-progress__eyebrow">CHALLENGE STATUS</span>
+              <strong>2 projects shipped</strong>
+            </div>
+            <span class="challenge-progress__remaining">98 to go</span>
+          </div>
+          <div class="challenge-progress__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="2" aria-label="100 Days of Python progress">
+            <span style="width: 2%"></span>
+          </div>
+          <div class="challenge-progress__footer">
+            <span>START // DAY 001</span>
+            <span>NEXT // DAY 003</span>
+          </div>
         </div>
       </div>
 

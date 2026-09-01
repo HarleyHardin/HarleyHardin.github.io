@@ -276,32 +276,63 @@ svg { width: 1.15em; height: 1.15em; fill: none; stroke: currentColor; stroke-wi
 }
 .challenge-banner__copy h3 span { color: var(--dim); -webkit-text-fill-color: var(--dim); font-size: .42em; }
 .challenge-banner__copy > p:not(.card-label) { color: var(--muted); max-width: 560px; }
-.challenge-progress { position: relative; z-index: 1; }
-.challenge-progress__meta,
-.challenge-progress__days {
-  display: flex;
-  justify-content: space-between;
-  color: var(--dim);
-  font: 750 .62rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
-  letter-spacing: .06em;
+.challenge-progress {
+  position: relative;
+  z-index: 1;
+  padding: 22px 24px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+  background: rgba(5,6,18,.35);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.025);
 }
-.challenge-progress__meta { margin-bottom: 11px; }
-.challenge-progress__days { margin-top: 10px; }
+.challenge-progress__status {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+.challenge-progress__status > div {
+  display: grid;
+  gap: 7px;
+}
+.challenge-progress__eyebrow,
+.challenge-progress__remaining,
+.challenge-progress__footer {
+  color: var(--dim);
+  font: 750 .62rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .08em;
+}
+.challenge-progress__status strong {
+  color: var(--text);
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  line-height: 1.15;
+}
+.challenge-progress__remaining {
+  white-space: nowrap;
+  color: var(--blue);
+}
 .challenge-progress__track {
-  height: 8px;
+  height: 10px;
   border-radius: 999px;
   background: rgba(255,255,255,.055);
-  border: 1px solid rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.065);
   overflow: hidden;
   box-shadow: inset 0 0 20px rgba(0,0,0,.35);
 }
 .challenge-progress__track span {
   display: block;
-  min-width: 10px;
+  min-width: 18px;
   height: 100%;
   border-radius: inherit;
   background: linear-gradient(90deg, var(--pink), var(--purple), var(--blue));
   box-shadow: 0 0 18px rgba(168,85,247,.7);
+}
+.challenge-progress__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 12px;
 }
 .code-window__bar span {
   margin-left: auto;
@@ -341,7 +372,8 @@ svg { width: 1.15em; height: 1.15em; fill: none; stroke: currentColor; stroke-wi
 
 @media (max-width: 700px) {
   .challenge-banner { padding: 23px; }
-  .challenge-progress__days span:nth-child(2),
-  .challenge-progress__days span:nth-child(4) { display: none; }
+  .challenge-progress { padding: 18px; }
+  .challenge-progress__status { align-items: flex-start; }
+  .challenge-progress__footer { font-size: .56rem; }
   .project-note { margin-left: 0; }
 }

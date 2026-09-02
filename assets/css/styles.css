@@ -347,7 +347,7 @@ svg { width: 1.15em; height: 1.15em; fill: none; stroke: currentColor; stroke-wi
   letter-spacing: .04em;
 }
 .project-card--challenge::after {
-  content: "02/100";
+  content: "03/100";
   position: absolute;
   right: -18px;
   bottom: 18px;

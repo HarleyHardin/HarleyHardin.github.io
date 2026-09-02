@@ -150,23 +150,23 @@
       <div class="challenge-banner glass reveal" aria-label="100 Days of Python challenge progress">
         <div class="challenge-banner__copy">
           <p class="card-label">100 DAYS OF PYTHON</p>
-          <h3>02 <span>/ 100</span></h3>
+          <h3>03 <span>/ 100</span></h3>
           <p>One Python project every day. This portfolio will grow with the challenge as I practice, experiment, and ship increasingly capable programs.</p>
         </div>
-        <div class="challenge-progress" aria-label="2 of 100 projects completed">
+        <div class="challenge-progress" aria-label="3 of 100 projects completed">
           <div class="challenge-progress__status">
             <div>
               <span class="challenge-progress__eyebrow">CHALLENGE STATUS</span>
-              <strong>2 projects shipped</strong>
+              <strong>3 projects shipped</strong>
             </div>
-            <span class="challenge-progress__remaining">98 to go</span>
+            <span class="challenge-progress__remaining">97 to go</span>
           </div>
-          <div class="challenge-progress__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="2" aria-label="100 Days of Python progress">
-            <span style="width: 2%"></span>
+          <div class="challenge-progress__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="3" aria-label="100 Days of Python progress">
+            <span style="width: 3%"></span>
           </div>
           <div class="challenge-progress__footer">
             <span>START // DAY 001</span>
-            <span>NEXT // DAY 003</span>
+            <span>NEXT // DAY 004</span>
           </div>
         </div>
       </div>
@@ -174,41 +174,50 @@
       <div class="projects-grid">
         <article class="project-card project-card--featured glass reveal">
           <div class="project-card__topline">
-            <span>FEATURED // DAY 001</span>
+            <span>FEATURED // DAY 003</span>
             <span class="project-status">SHIPPED</span>
           </div>
           <div class="project-card__content">
             <div>
-              <p class="card-label">PYTHON / CLI</p>
-              <h3>Number Guessing Game</h3>
-              <p>A terminal guessing game that generates a random number from 1–100, validates user input and range, tracks attempts, and gives color-coded higher/lower feedback until the correct answer is found.</p>
+              <p class="card-label">PYTHON / GAME LOGIC</p>
+              <h3>Rock, Paper, Scissors</h3>
+              <p>A replayable terminal game that pits the player against a randomized computer choice, validates input, applies the win/tie/loss rules, and tracks the running score across multiple rounds.</p>
               <div class="tags" aria-label="Concepts used">
-                <span>Python</span><span>random</span><span>Input Validation</span><span>Loops</span><span>ANSI Color</span>
+                <span>Python</span><span>random</span><span>Input Validation</span><span>Game Logic</span><span>State Tracking</span>
               </div>
             </div>
             <div class="project-visual">
-              <div class="code-window" aria-label="Excerpt from the Number Guessing Game source code">
-                <div class="code-window__bar"><i></i><i></i><i></i><span>Day_1_Number_Guessing_Game.py</span></div>
-                <pre><code><span class="code-purple">answer</span> = random.randint(<span class="code-blue">1</span>, <span class="code-blue">100</span>)
-tries = <span class="code-blue">1</span>
+              <div class="code-window" aria-label="Excerpt from the Rock Paper Scissors source code">
+                <div class="code-window__bar"><i></i><i></i><i></i><span>Day_3_Rock_Paper_Scissors.py</span></div>
+                <pre><code>computer_choice = random.choice(choices)
 
-<span class="code-purple">while</span> <span class="code-blue">True</span>:
-    guess = input(<span class="code-pink">"What is your guess: "</span>)
-
-    <span class="code-purple">if not</span> guess.isdigit():
-        print(RED + <span class="code-pink">"Please enter a valid number."</span> + RESET)
-        <span class="code-purple">continue</span>
-
-    <span class="code-purple">if</span> answer == int(guess):
-        print(GREEN + <span class="code-pink">"CORRECT!"</span> + RESET)
-        <span class="code-purple">break</span></code></pre>
+<span class="code-purple">if</span> player_choice == computer_choice:
+    ties += <span class="code-blue">1</span>
+<span class="code-purple">elif</span> (player_choice == <span class="code-pink">"rock"</span> <span class="code-purple">and</span>
+      computer_choice == <span class="code-pink">"scissors"</span>) <span class="code-purple">or</span> \
+     (player_choice == <span class="code-pink">"paper"</span> <span class="code-purple">and</span>
+      computer_choice == <span class="code-pink">"rock"</span>):
+    wins += <span class="code-blue">1</span>
+<span class="code-purple">else</span>:
+    losses += <span class="code-blue">1</span></code></pre>
               </div>
             </div>
           </div>
           <div class="project-card__footer">
-            <a href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Day_1_Number_Guessing_Game.py" target="_blank" rel="noreferrer">View source <span>↗</span></a>
-            <span class="project-note">100 Days of Python // Day 01</span>
+            <a href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Day_3_Rock_Paper_Scissors.py" target="_blank" rel="noreferrer">View source <span>↗</span></a>
+            <span class="project-note">100 Days of Python // Day 03</span>
           </div>
+        </article>
+
+        <article class="project-card glass reveal">
+          <div class="project-card__topline"><span>DAY 001 // PROJECT</span><span>PY</span></div>
+          <div>
+            <p class="card-label">PYTHON / CLI</p>
+            <h3>Number Guessing Game</h3>
+            <p>A terminal guessing game that generates a random number from 1–100, validates user input and range, tracks attempts, and gives color-coded higher/lower feedback until the correct answer is found.</p>
+          </div>
+          <div class="tags"><span>Python</span><span>random</span><span>Validation</span><span>Loops</span><span>ANSI Color</span></div>
+          <a class="project-link" href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Day_1_Number_Guessing_Game.py" target="_blank" rel="noreferrer" aria-label="View Number Guessing Game source on GitHub">View source <span>↗</span></a>
         </article>
 
         <article class="project-card glass reveal">
@@ -220,19 +229,6 @@ tries = <span class="code-blue">1</span>
           </div>
           <div class="tags"><span>Python</span><span>datetime</span><span>calendar</span><span>Scoring</span><span>CLI</span></div>
           <a class="project-link" href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Day_2_Simple_Quiz_Game.py" target="_blank" rel="noreferrer" aria-label="View Simple Quiz Game source on GitHub">View source <span>↗</span></a>
-        </article>
-
-        <article class="project-card project-card--challenge glass reveal">
-          <div class="project-card__topline"><span>CHALLENGE // LIVE</span><span>100</span></div>
-          <div>
-            <p class="card-label">DAILY BUILD LOG</p>
-            <h3>100 Days of Python</h3>
-            <p>A running challenge to design and write one Python project every day. New projects will be added here as the challenge progresses, with the strongest builds promoted to featured work.</p>
-          </div>
-          <div class="challenge-mini">
-            <strong>2</strong><span>projects shipped</span>
-          </div>
-          <a class="project-link" href="https://github.com/HarleyHardin/HarleyHardin.github.io/tree/main/projects/python-100-days" target="_blank" rel="noreferrer" aria-label="Browse the 100 Days of Python source files on GitHub">Browse challenge <span>↗</span></a>
         </article>
       </div>
     </section>

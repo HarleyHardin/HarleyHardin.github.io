@@ -52,6 +52,6 @@ Do not use a wildcard (`*`) record for GitHub Pages.
 
 ## 100 Days of Python
 
-The portfolio includes a live 100 Days of Python section. Source files live in `projects/python-100-days/`. The current build features Day 01 (Number Guessing Game) and Day 02 (Simple Quiz Game).
+The portfolio includes a live 100 Days of Python section. Source files live in `projects/python-100-days/`. The current build includes Day 01 (Number Guessing Game), Day 02 (Simple Quiz Game), and Day 03 (Rock, Paper, Scissors). Day 03 is currently featured.
 
 For each new day, add the new Python file, update the challenge counter and project card in `index.html`, then commit and push.

@@ -153,7 +153,7 @@
           <h3>04 <span>/ 100</span></h3>
           <p>One Python project every day, with bonus builds when inspiration strikes. Day 4 shifts the challenge firmly into practical cybersecurity tooling.</p>
         </div>
-        <div class="challenge-progress" aria-label="4 of 100 challenge days completed, with 6 total projects shipped">
+        <div class="challenge-progress" aria-label="4 of 100 challenge days completed, with 7 total projects shipped">
           <div class="challenge-progress__status">
             <div>
               <span class="challenge-progress__eyebrow">CHALLENGE STATUS</span>
@@ -165,7 +165,7 @@
             <span style="width: 4%"></span>
           </div>
           <div class="challenge-progress__footer">
-            <span>6 PROJECTS SHIPPED // +2 BONUS</span>
+            <span>7 PROJECTS SHIPPED // +3 BONUS</span>
             <span>NEXT // DAY 005</span>
           </div>
         </div>
@@ -174,39 +174,51 @@
       <div class="projects-grid">
         <article class="project-card project-card--featured glass reveal">
           <div class="project-card__topline">
-            <span>FEATURED // DAY 004</span>
-            <span class="project-status">SECURITY TOOL</span>
+            <span>FEATURED // BONUS DAY 004</span>
+            <span class="project-status">SECURITY API TOOL</span>
           </div>
           <div class="project-card__content">
             <div>
-              <p class="card-label">PYTHON / PASSWORD SECURITY</p>
-              <h3>Password Audit Tool</h3>
-              <p>A terminal-based password auditing tool that scores passwords against uppercase, lowercase, digit, special-character, repeated-character, minimum-length, and common-password checks, then summarizes strength across the audit session.</p>
+              <p class="card-label">PYTHON / URL THREAT INTELLIGENCE</p>
+              <h3>VirusTotal URL Analyzer</h3>
+              <p>A command-line URL analysis tool that encodes URLs for the VirusTotal API, retrieves the latest analysis statistics, classifies results as low, medium, or high risk, and calculates a numerical score from malicious, suspicious, and undetected detections.</p>
               <div class="tags" aria-label="Concepts used">
-                <span>Python</span><span>Functions</span><span>Wordlists</span><span>Validation</span><span>Security Scoring</span><span>Session Stats</span>
+                <span>Python</span><span>VirusTotal API</span><span>requests</span><span>Base64</span><span>HTTP</span><span>Risk Scoring</span>
               </div>
             </div>
             <div class="project-visual">
-              <div class="code-window" aria-label="Excerpt from the Password Audit Tool source code">
-                <div class="code-window__bar"><i></i><i></i><i></i><span>Day_4_Password_Audit_Tool.py</span></div>
-                <pre><code><span class="code-purple">def</span> repeated_char_check(password):
-    <span class="code-purple">for</span> c <span class="code-purple">in</span> range(len(password) - <span class="code-blue">2</span>):
-        <span class="code-purple">if</span> password[c] == password[c + <span class="code-blue">1</span>] == password[c + <span class="code-blue">2</span>]:
-            <span class="code-purple">return</span> <span class="code-pink">False</span>
-    <span class="code-purple">return</span> <span class="code-pink">True</span>
+              <div class="code-window" aria-label="Excerpt from the VirusTotal URL Analyzer source code">
+                <div class="code-window__bar"><i></i><i></i><i></i><span>Bonus_Day_4_URL_Analyzer.py</span></div>
+                <pre><code><span class="code-purple">def</span> determine_risk(stats):
+    <span class="code-purple">if</span> stats[<span class="code-pink">'malicious'</span>] &gt; <span class="code-blue">0</span>:
+        <span class="code-purple">return</span> <span class="code-pink">"High"</span>
+    <span class="code-purple">elif</span> stats[<span class="code-pink">'suspicious'</span>] &gt; <span class="code-blue">0</span>:
+        <span class="code-purple">return</span> <span class="code-pink">"Medium"</span>
+    <span class="code-purple">return</span> <span class="code-pink">"Low"</span>
 
-<span class="code-purple">if</span> len(password) &lt; <span class="code-blue">12</span>:
-    score = <span class="code-blue">0</span>
+url_id = base64.urlsafe_b64encode(
+    TARGET_URL.encode()
+).decode().strip(<span class="code-pink">"="</span>)
 
-<span class="code-purple">if</span> password <span class="code-purple">in</span> common_passwords:
-    score = <span class="code-blue">0</span></code></pre>
+response = requests.get(endpoint, headers=headers)</code></pre>
               </div>
             </div>
           </div>
           <div class="project-card__footer">
-            <a href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Day_4_Password_Audit_Tool.py" target="_blank" rel="noreferrer">View source <span>↗</span></a>
-            <span class="project-note">100 Days of Python // Day 04</span>
+            <a href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Bonus_Day_4_URL_Analyzer.py" target="_blank" rel="noreferrer">View source <span>↗</span></a>
+            <span class="project-note">100 Days of Python // Day 04 Bonus</span>
           </div>
+        </article>
+
+        <article class="project-card glass reveal">
+          <div class="project-card__topline"><span>DAY 004 // PROJECT</span><span>SEC</span></div>
+          <div>
+            <p class="card-label">PYTHON / PASSWORD SECURITY</p>
+            <h3>Password Audit Tool</h3>
+            <p>A terminal-based password auditing tool that scores passwords against uppercase, lowercase, digit, special-character, repeated-character, minimum-length, and common-password checks, then summarizes strength across the audit session.</p>
+          </div>
+          <div class="tags"><span>Python</span><span>Functions</span><span>Wordlists</span><span>Validation</span><span>Security Scoring</span><span>Session Stats</span></div>
+          <a class="project-link" href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Day_4_Password_Audit_Tool.py" target="_blank" rel="noreferrer" aria-label="View Password Audit Tool source on GitHub">View source <span>↗</span></a>
         </article>
 
         <article class="project-card glass reveal">
@@ -281,7 +293,7 @@
             <div><p class="card-label">DEVELOPMENT</p><h3>Build</h3></div>
           </div>
           <div class="skill-list">
-            <span>Python</span><span>FastAPI</span><span>REST APIs</span><span>PostgreSQL</span><span>Docker</span><span>Git / GitHub</span>
+            <span>Python</span><span>REST APIs</span><span>API Integration</span><span>FastAPI</span><span>Docker</span><span>Git / GitHub</span>
           </div>
         </article>
 
@@ -291,7 +303,7 @@
             <div><p class="card-label">CYBERSECURITY</p><h3>Break / Defend</h3></div>
           </div>
           <div class="skill-list">
-            <span>Web Security</span><span>Password Auditing</span><span>Log Analysis</span><span>File Integrity</span><span>Linux</span><span>Security Research</span>
+            <span>Web Security</span><span>Password Auditing</span><span>Threat Intelligence</span><span>Log Analysis</span><span>File Integrity</span><span>Security Research</span>
           </div>
         </article>
 

@@ -8,6 +8,7 @@ Projects completed as part of Harley Hardin's 100 Days of Python challenge.
 - Day 04 — Password Audit Tool
 - Bonus Day 04 — Security Log Analyzer
 - Bonus Day 04 — File Integrity Checker (work in progress)
+- Bonus Day 04 — VirusTotal URL Analyzer
 
 Challenge progress: **04 / 100 days**  
-Total projects shipped: **6**
+Total projects shipped: **7**

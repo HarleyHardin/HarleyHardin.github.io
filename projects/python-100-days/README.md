@@ -10,9 +10,10 @@ Projects completed as part of Harley Hardin's 100 Days of Python challenge.
 - Bonus Day 04 — File Integrity Checker (work in progress)
 - Bonus Day 04 — VirusTotal URL Analyzer
 - Day 05 — Static File Analyzer (learning log / scope lesson)
+- Day 06 — Suspicious Process Checker (one-hour Tkinter GUI practice)
 
-Challenge progress: **05 / 100 days**  
-Total projects shipped: **8**
+Challenge progress: **06 / 100 days**  
+Total projects shipped: **9**
 
 ## Day 05 — Static File Analyzer
 
@@ -27,3 +28,10 @@ I'm still uploading it because this is what I worked on for Day 5, and the point
 The biggest thing I learned today wasn't Python: it was that I need to keep my projects small enough that I can actually solve the problems myself.
 
 Tomorrow I'm scaling things back.
+
+
+## Day 06 — Suspicious Process Checker
+
+After deliberately scaling the challenge back down, Day 6 was limited to one hour and focused on completing a small GUI project I could understand end to end. The Tkinter interface is intentionally simple, but the program handles process-name checks, case-insensitive matching, blank input, a running check counter, an editable suspicious-process list, a history window, and result clearing.
+
+The goal was not to build a production process-detection engine. It was to practice GUI event handling, state, lists, and finishing a project within a realistic scope.

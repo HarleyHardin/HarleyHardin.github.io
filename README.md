@@ -52,6 +52,6 @@ Do not use a wildcard (`*`) record for GitHub Pages.
 
 ## 100 Days of Python
 
-The portfolio includes a live 100 Days of Python section. Source files live in `projects/python-100-days/`. The current build includes Days 01–04 plus three Day 04 bonus security projects. Challenge progress is 04/100, with 7 total projects shipped. The Day 04 bonus VirusTotal URL Analyzer is currently featured.
+The portfolio includes a live 100 Days of Python section. Source files live in `projects/python-100-days/`. The current build includes Days 01–05 plus three Day 04 bonus security projects. Challenge progress is 05/100, with 8 total projects shipped. The Day 04 bonus VirusTotal URL Analyzer remains featured. Day 05 is intentionally presented as a learning-log entry because its scope expanded beyond what Harley could independently recreate at this stage of the challenge.
 
 For each new day, add the new Python file, update the challenge-day counter and project cards in `index.html`, then commit and push. Bonus projects should increase the total-project count without increasing the 100-day challenge counter.

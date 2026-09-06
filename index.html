@@ -150,23 +150,23 @@
       <div class="challenge-banner glass reveal" aria-label="100 Days of Python challenge progress">
         <div class="challenge-banner__copy">
           <p class="card-label">100 DAYS OF PYTHON</p>
-          <h3>06 <span>/ 100</span></h3>
-          <p>One Python project every day, with bonus builds when inspiration strikes. After Day 5 taught me to rein in the scope, Day 6 went deliberately smaller: a one-hour Tkinter process checker focused on GUI events, state, history, and finishing what I could explain.</p>
+          <h3>08 <span>/ 100</span></h3>
+          <p>One Python project every day, with bonus builds when inspiration strikes. Days 7 and 8 stayed intentionally focused: first a small username-policy auditor, then an account-registration sample that reuses those checks and adds password-complexity and duplicate-username validation.</p>
         </div>
-        <div class="challenge-progress" aria-label="6 of 100 challenge days completed, with 9 total projects shipped">
+        <div class="challenge-progress" aria-label="8 of 100 challenge days completed, with 11 total projects shipped">
           <div class="challenge-progress__status">
             <div>
               <span class="challenge-progress__eyebrow">CHALLENGE STATUS</span>
-              <strong>6 challenge days complete</strong>
+              <strong>8 challenge days complete</strong>
             </div>
-            <span class="challenge-progress__remaining">94 to go</span>
+            <span class="challenge-progress__remaining">92 to go</span>
           </div>
-          <div class="challenge-progress__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="6" aria-label="100 Days of Python progress">
-            <span style="width: 6%"></span>
+          <div class="challenge-progress__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="8" aria-label="100 Days of Python progress">
+            <span style="width: 8%"></span>
           </div>
           <div class="challenge-progress__footer">
-            <span>9 PROJECTS SHIPPED // +3 BONUS</span>
-            <span>NEXT // DAY 007</span>
+            <span>11 PROJECTS SHIPPED // +3 BONUS</span>
+            <span>NEXT // DAY 009</span>
           </div>
         </div>
       </div>
@@ -208,6 +208,30 @@ response = requests.get(endpoint, headers=headers)</code></pre>
             <a href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Bonus_Day_4_URL_Analyzer.py" target="_blank" rel="noreferrer">View source <span>↗</span></a>
             <span class="project-note">100 Days of Python // Day 04 Bonus</span>
           </div>
+        </article>
+
+
+        <article class="project-card glass reveal">
+          <div class="project-card__topline"><span>DAY 008 // PROJECT</span><span>AUTH LEARNING</span></div>
+          <div>
+            <p class="card-label">PYTHON / ACCOUNT REGISTRATION</p>
+            <h3>Account Registration Sample</h3>
+            <p>A command-line registration exercise that builds on the username-auditing idea: it rejects short, blocked, or already-taken usernames, checks passwords for uppercase, lowercase, numeric, special-character, and minimum-length requirements, then appends accepted accounts to a local user database.</p>
+            <p><strong>Learning note:</strong> this version stores passwords in plaintext, which the source explicitly flags as a bug. It is a practice project for validation and registration flow—not a secure authentication system.</p>
+          </div>
+          <div class="tags"><span>Python</span><span>Validation</span><span>Wordlists</span><span>Password Rules</span><span>File I/O</span><span>Security Learning</span></div>
+          <a class="project-link" href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Day_8_Account_Registration_Sample.py" target="_blank" rel="noreferrer" aria-label="View Account Registration Sample source on GitHub">View source <span>↗</span></a>
+        </article>
+
+        <article class="project-card glass reveal">
+          <div class="project-card__topline"><span>DAY 007 // PROJECT</span><span>POLICY CHECK</span></div>
+          <div>
+            <p class="card-label">PYTHON / USERNAME AUDITING</p>
+            <h3>Username Auditor</h3>
+            <p>A compact command-line username checker that loads profanity and impersonation terms from local wordlists, normalizes input for case-insensitive matching, and rejects usernames containing blocked terms until the user exits.</p>
+          </div>
+          <div class="tags"><span>Python</span><span>Wordlists</span><span>File I/O</span><span>String Matching</span><span>Validation</span></div>
+          <a class="project-link" href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Day_7_Username_Auditor.py" target="_blank" rel="noreferrer" aria-label="View Username Auditor source on GitHub">View source <span>↗</span></a>
         </article>
 
         <article class="project-card glass reveal">

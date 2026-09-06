@@ -11,9 +11,11 @@ Projects completed as part of Harley Hardin's 100 Days of Python challenge.
 - Bonus Day 04 — VirusTotal URL Analyzer
 - Day 05 — Static File Analyzer (learning log / scope lesson)
 - Day 06 — Suspicious Process Checker (one-hour Tkinter GUI practice)
+- Day 07 — Username Auditor
+- Day 08 — Account Registration Sample (authentication-learning project; plaintext password storage is a known bug)
 
-Challenge progress: **06 / 100 days**  
-Total projects shipped: **9**
+Challenge progress: **08 / 100 days**  
+Total projects shipped: **11**
 
 ## Day 05 — Static File Analyzer
 
@@ -35,3 +37,14 @@ Tomorrow I'm scaling things back.
 After deliberately scaling the challenge back down, Day 6 was limited to one hour and focused on completing a small GUI project I could understand end to end. The Tkinter interface is intentionally simple, but the program handles process-name checks, case-insensitive matching, blank input, a running check counter, an editable suspicious-process list, a history window, and result clearing.
 
 The goal was not to build a production process-detection engine. It was to practice GUI event handling, state, lists, and finishing a project within a realistic scope.
+
+
+## Day 07 — Username Auditor
+
+A deliberately small username-policy checker that reads profanity and impersonation terms from local wordlists and rejects usernames containing blocked terms. The project focuses on file input, list preparation, case-insensitive string matching, and a simple validation loop.
+
+## Day 08 — Account Registration Sample
+
+Day 8 builds directly on the username-auditing idea by adding minimum-length checks, duplicate username detection from a local user database, and password-complexity feedback. The current version writes accepted username/password pairs to a local text file.
+
+**Known security issue:** passwords are stored in plaintext. This is intentionally documented as a bug and the project should be treated as registration-flow and validation practice, not as a secure authentication implementation.

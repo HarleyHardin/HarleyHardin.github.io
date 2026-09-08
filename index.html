@@ -91,7 +91,7 @@
             <div class="terminal__list">
               <span><i>01</i> Application Security</span>
               <span><i>02</i> Python Engineering</span>
-              <span><i>03</i> 100 Days of Python // 002/100</span>
+              <span><i>03</i> 100 Days of Python // 009/100</span>
             </div>
             <p><span class="prompt">$</span> status</p>
             <p class="terminal__output terminal__output--accent">building // learning // shipping<span class="cursor">_</span></p>
@@ -150,23 +150,23 @@
       <div class="challenge-banner glass reveal" aria-label="100 Days of Python challenge progress">
         <div class="challenge-banner__copy">
           <p class="card-label">100 DAYS OF PYTHON</p>
-          <h3>08 <span>/ 100</span></h3>
-          <p>One Python project every day, with bonus builds when inspiration strikes. Days 7 and 8 stayed intentionally focused: first a small username-policy auditor, then an account-registration sample that reuses those checks and adds password-complexity and duplicate-username validation.</p>
+          <h3>09 <span>/ 100</span></h3>
+          <p>One Python project every day, with bonus builds when inspiration strikes. Day 9 moves into data-backed access control: a SQLite employee lookup, room-specific access levels, grant/deny decisions, and an append-only text audit log. The Day 8 casino is counted as a bonus build.</p>
         </div>
-        <div class="challenge-progress" aria-label="8 of 100 challenge days completed, with 11 total projects shipped">
+        <div class="challenge-progress" aria-label="9 of 100 challenge days completed, with 13 total projects shipped">
           <div class="challenge-progress__status">
             <div>
               <span class="challenge-progress__eyebrow">CHALLENGE STATUS</span>
-              <strong>8 challenge days complete</strong>
+              <strong>9 challenge days complete</strong>
             </div>
-            <span class="challenge-progress__remaining">92 to go</span>
+            <span class="challenge-progress__remaining">91 to go</span>
           </div>
-          <div class="challenge-progress__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="8" aria-label="100 Days of Python progress">
-            <span style="width: 8%"></span>
+          <div class="challenge-progress__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="9" aria-label="100 Days of Python progress">
+            <span style="width: 9%"></span>
           </div>
           <div class="challenge-progress__footer">
-            <span>11 PROJECTS SHIPPED // +3 BONUS</span>
-            <span>NEXT // DAY 009</span>
+            <span>13 PROJECTS SHIPPED // +4 BONUS</span>
+            <span>NEXT // DAY 010</span>
           </div>
         </div>
       </div>
@@ -174,40 +174,62 @@
       <div class="projects-grid">
         <article class="project-card project-card--featured glass reveal">
           <div class="project-card__topline">
-            <span>FEATURED // BONUS DAY 004</span>
-            <span class="project-status">SECURITY API TOOL</span>
+            <span>FEATURED // DAY 009</span>
+            <span class="project-status">ACCESS CONTROL</span>
           </div>
           <div class="project-card__content">
             <div>
-              <p class="card-label">PYTHON / URL THREAT INTELLIGENCE</p>
-              <h3>VirusTotal URL Analyzer</h3>
-              <p>A command-line URL analysis tool that encodes URLs for the VirusTotal API, retrieves the latest analysis statistics, classifies results as low, medium, or high risk, and calculates a numerical score from malicious, suspicious, and undetected detections.</p>
+              <p class="card-label">PYTHON / SQLITE / AUTHORIZATION</p>
+              <h3>Access Control Gateway</h3>
+              <p>A terminal-based access-control exercise that maps rooms to permitted access levels, looks up an employee's access level from SQLite with a parameterized query, makes grant/deny decisions, and records each decision in an audit log.</p>
               <div class="tags" aria-label="Concepts used">
-                <span>Python</span><span>VirusTotal API</span><span>requests</span><span>Base64</span><span>HTTP</span><span>Risk Scoring</span>
+                <span>Python</span><span>SQLite</span><span>Parameterized SQL</span><span>Access Control</span><span>Audit Logging</span><span>Dictionaries</span>
               </div>
             </div>
             <div class="project-visual">
-              <div class="code-window" aria-label="Excerpt from the VirusTotal URL Analyzer source code">
-                <div class="code-window__bar"><i></i><i></i><i></i><span>Bonus_Day_4_URL_Analyzer.py</span></div>
-                <pre><code><span class="code-purple">def</span> determine_risk(stats):
-    <span class="code-purple">if</span> stats[<span class="code-pink">'malicious'</span>] &gt; <span class="code-blue">0</span>:
-        <span class="code-purple">return</span> <span class="code-pink">"High"</span>
-    <span class="code-purple">elif</span> stats[<span class="code-pink">'suspicious'</span>] &gt; <span class="code-blue">0</span>:
-        <span class="code-purple">return</span> <span class="code-pink">"Medium"</span>
-    <span class="code-purple">return</span> <span class="code-pink">"Low"</span>
+              <div class="code-window" aria-label="Excerpt from the Access Control Gateway source code">
+                <div class="code-window__bar"><i></i><i></i><i></i><span>Day_9_Access_Control_Gateway.py</span></div>
+                <pre><code>cursor.execute(
+    <span class="code-pink">"SELECT access FROM employees WHERE username = ?"</span>,
+    (username,)
+)
+result = cursor.fetchone()
 
-url_id = base64.urlsafe_b64encode(
-    TARGET_URL.encode()
-).decode().strip(<span class="code-pink">"="</span>)
-
-response = requests.get(endpoint, headers=headers)</code></pre>
+<span class="code-purple">if</span> acl <span class="code-purple">in</span> key:
+    print(<span class="code-pink">"Access granted."</span>)
+    decision = <span class="code-pink">"GRANTED"</span>
+<span class="code-purple">else</span>:
+    print(<span class="code-pink">"Access denied."</span>)
+    decision = <span class="code-pink">"DENIED"</span></code></pre>
               </div>
             </div>
           </div>
           <div class="project-card__footer">
-            <a href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Bonus_Day_4_URL_Analyzer.py" target="_blank" rel="noreferrer">View source <span>↗</span></a>
-            <span class="project-note">100 Days of Python // Day 04 Bonus</span>
+            <a href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Day_9_Access_Control_Gateway.py" target="_blank" rel="noreferrer">View source <span>↗</span></a>
+            <span class="project-note">100 Days of Python // Day 09</span>
           </div>
+        </article>
+
+        <article class="project-card glass reveal">
+          <div class="project-card__topline"><span>BONUS // DAY 008</span><span>GAME LOGIC</span></div>
+          <div>
+            <p class="card-label">PYTHON / HIGHER-LOWER CASINO</p>
+            <h3>Casino Higher / Lower</h3>
+            <p>A small bonus game that starts the player with $100, rolls random values, validates bets against the available balance, resolves higher/lower guesses, updates winnings or losses, and ends when the bankroll reaches zero.</p>
+          </div>
+          <div class="tags"><span>Python</span><span>random</span><span>Input Validation</span><span>Game State</span><span>Loops</span><span>Bonus</span></div>
+          <a class="project-link" href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Bonus_Day_8_Casino.py" target="_blank" rel="noreferrer" aria-label="View Casino Higher Lower source on GitHub">View source <span>↗</span></a>
+        </article>
+
+        <article class="project-card glass reveal">
+          <div class="project-card__topline"><span>BONUS // DAY 004</span><span>SECURITY API TOOL</span></div>
+          <div>
+            <p class="card-label">PYTHON / URL THREAT INTELLIGENCE</p>
+            <h3>VirusTotal URL Analyzer</h3>
+            <p>A command-line URL analysis tool that encodes URLs for the VirusTotal API, retrieves analysis statistics, classifies low/medium/high risk, and calculates a numerical score from the returned detection counts.</p>
+          </div>
+          <div class="tags"><span>Python</span><span>VirusTotal API</span><span>requests</span><span>Base64</span><span>HTTP</span><span>Risk Scoring</span></div>
+          <a class="project-link" href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Bonus_Day_4_URL_Analyzer.py" target="_blank" rel="noreferrer" aria-label="View VirusTotal URL Analyzer source on GitHub">View source <span>↗</span></a>
         </article>
 
 
@@ -340,7 +362,7 @@ response = requests.get(endpoint, headers=headers)</code></pre>
             <div><p class="card-label">DEVELOPMENT</p><h3>Build</h3></div>
           </div>
           <div class="skill-list">
-            <span>Python</span><span>REST APIs</span><span>API Integration</span><span>FastAPI</span><span>Docker</span><span>Git / GitHub</span>
+            <span>Python</span><span>SQLite</span><span>REST APIs</span><span>API Integration</span><span>FastAPI</span><span>Git / GitHub</span>
           </div>
         </article>
 
@@ -350,7 +372,7 @@ response = requests.get(endpoint, headers=headers)</code></pre>
             <div><p class="card-label">CYBERSECURITY</p><h3>Break / Defend</h3></div>
           </div>
           <div class="skill-list">
-            <span>Web Security</span><span>Password Auditing</span><span>Threat Intelligence</span><span>Log Analysis</span><span>File Integrity</span><span>Security Research</span>
+            <span>Web Security</span><span>Access Control</span><span>Password Auditing</span><span>Threat Intelligence</span><span>Audit Logging</span><span>Security Research</span>
           </div>
         </article>
 

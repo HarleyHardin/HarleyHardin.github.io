@@ -1,0 +1,8 @@
+Day 9 expects the existing project database at:
+
+projects/python-100-days/databases/employees.db
+
+Use the employees.db file from the Day 9 project source. It should contain an
+employees table with the username and access fields used by Day_9_Access_Control_Gateway.py.
+
+This update package does not fabricate or replace the original database.

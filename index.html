@@ -91,7 +91,7 @@
             <div class="terminal__list">
               <span><i>01</i> Application Security</span>
               <span><i>02</i> Python Engineering</span>
-              <span><i>03</i> 100 Days of Python // 009/100</span>
+              <span><i>03</i> 100 Days of Python // 010/100</span>
             </div>
             <p><span class="prompt">$</span> status</p>
             <p class="terminal__output terminal__output--accent">building // learning // shipping<span class="cursor">_</span></p>
@@ -150,23 +150,23 @@
       <div class="challenge-banner glass reveal" aria-label="100 Days of Python challenge progress">
         <div class="challenge-banner__copy">
           <p class="card-label">100 DAYS OF PYTHON</p>
-          <h3>09 <span>/ 100</span></h3>
-          <p>One Python project every day, with bonus builds when inspiration strikes. Day 9 moves into data-backed access control: a SQLite employee lookup, room-specific access levels, grant/deny decisions, and an append-only text audit log. The Day 8 casino is counted as a bonus build.</p>
+          <h3>10 <span>/ 100</span></h3>
+          <p>One Python project every day, with bonus builds when inspiration strikes. Day 10 revisits account registration and fixes the biggest security flaw from Day 8: passwords are now hashed with bcrypt before being stored in SQLite, then verified during login without storing plaintext passwords.</p>
         </div>
-        <div class="challenge-progress" aria-label="9 of 100 challenge days completed, with 13 total projects shipped">
+        <div class="challenge-progress" aria-label="10 of 100 challenge days completed, with 14 total projects shipped">
           <div class="challenge-progress__status">
             <div>
               <span class="challenge-progress__eyebrow">CHALLENGE STATUS</span>
-              <strong>9 challenge days complete</strong>
+              <strong>10 challenge days complete</strong>
             </div>
-            <span class="challenge-progress__remaining">91 to go</span>
+            <span class="challenge-progress__remaining">90 to go</span>
           </div>
-          <div class="challenge-progress__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="9" aria-label="100 Days of Python progress">
-            <span style="width: 9%"></span>
+          <div class="challenge-progress__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="10" aria-label="100 Days of Python progress">
+            <span style="width: 10%"></span>
           </div>
           <div class="challenge-progress__footer">
-            <span>13 PROJECTS SHIPPED // +4 BONUS</span>
-            <span>NEXT // DAY 010</span>
+            <span>14 PROJECTS SHIPPED // +4 BONUS</span>
+            <span>NEXT // DAY 011</span>
           </div>
         </div>
       </div>
@@ -174,40 +174,50 @@
       <div class="projects-grid">
         <article class="project-card project-card--featured glass reveal">
           <div class="project-card__topline">
-            <span>FEATURED // DAY 009</span>
-            <span class="project-status">ACCESS CONTROL</span>
+            <span>FEATURED // DAY 010</span>
+            <span class="project-status">PASSWORD SECURITY</span>
           </div>
           <div class="project-card__content">
             <div>
-              <p class="card-label">PYTHON / SQLITE / AUTHORIZATION</p>
-              <h3>Access Control Gateway</h3>
-              <p>A terminal-based access-control exercise that maps rooms to permitted access levels, looks up an employee's access level from SQLite with a parameterized query, makes grant/deny decisions, and records each decision in an audit log.</p>
+              <p class="card-label">PYTHON / BCRYPT / SQLITE / AUTHENTICATION</p>
+              <h3>Secure Password Storage</h3>
+              <p>A menu-driven registration and login system that revisits Day 8 with proper password handling: passwords must meet strength rules, are salted and hashed with bcrypt before SQLite storage, and are verified with bcrypt during login. The project also validates names, prevents duplicate accounts, uses parameterized SQL, and writes login outcomes to a local audit log.</p>
               <div class="tags" aria-label="Concepts used">
-                <span>Python</span><span>SQLite</span><span>Parameterized SQL</span><span>Access Control</span><span>Audit Logging</span><span>Dictionaries</span>
+                <span>Python</span><span>bcrypt</span><span>SQLite</span><span>Password Hashing</span><span>Authentication</span><span>Parameterized SQL</span><span>Audit Logging</span>
               </div>
             </div>
             <div class="project-visual">
-              <div class="code-window" aria-label="Excerpt from the Access Control Gateway source code">
-                <div class="code-window__bar"><i></i><i></i><i></i><span>Day_9_Access_Control_Gateway.py</span></div>
-                <pre><code>cursor.execute(
-    <span class="code-pink">"SELECT access FROM employees WHERE username = ?"</span>,
-    (username,)
-)
-result = cursor.fetchone()
+              <div class="code-window" aria-label="Excerpt from the Secure Password Storage source code">
+                <div class="code-window__bar"><i></i><i></i><i></i><span>Day_10_Secure_Password_Storage.py</span></div>
+                <pre><code><span class="code-purple">def</span> <span class="code-blue">encryptpw</span>(password):
+    salt = bcrypt.gensalt()
+    hashed = bcrypt.hashpw(
+        password.encode(<span class="code-pink">'utf-8'</span>), salt
+    )
+    <span class="code-purple">return</span> hashed
 
-<span class="code-purple">if</span> acl <span class="code-purple">in</span> key:
-    print(<span class="code-pink">"Access granted."</span>)
-    decision = <span class="code-pink">"GRANTED"</span>
-<span class="code-purple">else</span>:
-    print(<span class="code-pink">"Access denied."</span>)
-    decision = <span class="code-pink">"DENIED"</span></code></pre>
+<span class="code-purple">def</span> <span class="code-blue">verifypw</span>(password, hashed):
+    <span class="code-purple">return</span> bcrypt.checkpw(
+        password.encode(<span class="code-pink">'utf-8'</span>), hashed
+    )</code></pre>
               </div>
             </div>
           </div>
           <div class="project-card__footer">
-            <a href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Day_9_Access_Control_Gateway.py" target="_blank" rel="noreferrer">View source <span>↗</span></a>
-            <span class="project-note">100 Days of Python // Day 09</span>
+            <a href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Day_10_Secure_Password_Storage/Day_10_Secure_Password_Storage.py" target="_blank" rel="noreferrer">View source <span>↗</span></a>
+            <span class="project-note">100 Days of Python // Day 10</span>
           </div>
+        </article>
+
+        <article class="project-card glass reveal">
+          <div class="project-card__topline"><span>DAY 009 // PROJECT</span><span>ACCESS CONTROL</span></div>
+          <div>
+            <p class="card-label">PYTHON / SQLITE / AUTHORIZATION</p>
+            <h3>Access Control Gateway</h3>
+            <p>A terminal-based access-control exercise that maps rooms to permitted access levels, looks up an employee's access level from SQLite with a parameterized query, makes grant/deny decisions, and records each decision in an audit log.</p>
+          </div>
+          <div class="tags"><span>Python</span><span>SQLite</span><span>Parameterized SQL</span><span>Access Control</span><span>Audit Logging</span><span>Dictionaries</span></div>
+          <a class="project-link" href="https://github.com/HarleyHardin/HarleyHardin.github.io/blob/main/projects/python-100-days/Day_9_Access_Control_Gateway.py" target="_blank" rel="noreferrer" aria-label="View Access Control Gateway source on GitHub">View source <span>↗</span></a>
         </article>
 
         <article class="project-card glass reveal">
@@ -362,7 +372,7 @@ result = cursor.fetchone()
             <div><p class="card-label">DEVELOPMENT</p><h3>Build</h3></div>
           </div>
           <div class="skill-list">
-            <span>Python</span><span>SQLite</span><span>REST APIs</span><span>API Integration</span><span>FastAPI</span><span>Git / GitHub</span>
+            <span>Python</span><span>SQLite</span><span>bcrypt</span><span>REST APIs</span><span>API Integration</span><span>Git / GitHub</span>
           </div>
         </article>
 
@@ -372,7 +382,7 @@ result = cursor.fetchone()
             <div><p class="card-label">CYBERSECURITY</p><h3>Break / Defend</h3></div>
           </div>
           <div class="skill-list">
-            <span>Web Security</span><span>Access Control</span><span>Password Auditing</span><span>Threat Intelligence</span><span>Audit Logging</span><span>Security Research</span>
+            <span>Web Security</span><span>Access Control</span><span>Password Hashing</span><span>Password Auditing</span><span>Threat Intelligence</span><span>Audit Logging</span>
           </div>
         </article>
 
